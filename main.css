@@ -1,0 +1,25 @@
+.square {
+	height: 100px;
+	width: 100px;
+	border: 1px solid black;
+	display: table-cell;
+	vertical-align: top;
+	text-align: center;
+	font-size: 400%;
+}
+
+#num1, #num4, #num7 {
+	border-left: none;
+}
+
+#num1, #num2, #num3 {
+	border-top: none;
+}
+
+#num3, #num6, #num9 {
+	border-right: none;
+}
+
+#num7, #num8, #num9 {
+	border-bottom: none;
+}
