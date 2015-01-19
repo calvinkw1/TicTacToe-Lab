@@ -18,6 +18,10 @@ body {
 	border: 10px solid black;
 }
 
+#moveCount {
+	color: red;
+}
+
 #reset {
 	margin-top: 10px;
 }

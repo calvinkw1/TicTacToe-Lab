@@ -11,6 +11,10 @@ var num5 = document.getElementById("num5");
 var num6 = document.getElementById("num6");
 var num7 = document.getElementById("num7");
 var num8 = document.getElementById("num8");
+var moveCount = document.getElementById("moveCount");
+var announcePlayer1 = "Waiting for Player 1 (X) to make a move.";
+var announcePlayer2 = "Waiting for Player 2 (O) to make a move.";
+var gameOverAnnounce = "Game Over! Press 'New Game' below to play again!";
 
 
 boxClick(gameBoxes);
@@ -22,15 +26,19 @@ function playerAnnounce() {
 	var turn = document.getElementById("player");
 	var moveCount = document.getElementById("moveCount");
 	if (turnCount % 2 === 0 && gameOver === false) {
-		turn.innerHTML = "1 (X)";
+		moveCount.innerHTML = announcePlayer1;
 		moveCount.style.color = "red";
 	} else if (turnCount % 2 === 1 && gameOver === false) {
-		turn.innerHTML = "2 (O)";
+		moveCount.innerHTML = announcePlayer2;
 		moveCount.style.color = "blue";
+	} else if (gameOver === true) {
+		moveCount.innerHTML = gameOverAnnounce;
 	} else {
-		moveCount.innerHTML = "Game Over! Press 'New Game' below to play again!";
+		moveCount.innerHTML = announcePlayer1;
 	}
 }
+
+
 
 var playerCombo = ["0", "1", "2", "3", "4", "5", "6", "7", "8"];
 
@@ -173,6 +181,7 @@ function newGame() {
 	gameOver = false;
 	turnCount = 0;
 	playerCombo = ["0", "1", "2", "3", "4", "5", "6", "7", "8"];
+	playerAnnounce();
 	console.log(playerCombo);
 }
 
