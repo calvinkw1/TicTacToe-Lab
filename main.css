@@ -6,24 +6,32 @@
 	text-align: center;
 	font-size: 400%;
 	padding-top: 30px;
+	font-family: 'Sigmar One', cursive;
 }
 
 body {
 	text-align: center;
 	background-color: #bcf2f4;
+	font-family: Verdana;
+}
+
+h1 {
+	font-family: Impact;
 }
 .container {
-	height: 460px;
-	width: 460px;
+	height: 470px;
+	width: 470px;
 	border: 10px solid black;
 }
 
 #moveCount {
 	color: red;
+	font-size: 20px;
+	font-family: 'Sigmar One', cursive;
 }
 
 #reset {
-	margin-top: 10px;
+	margin-top: 30px;
 }
 
 #moveCount {
@@ -45,13 +53,3 @@ body {
 #num6, #num7, #num8 {
 	border-bottom: none;
 }
-
-
-/*#container {
-	width: 25%;
-	margin: 0 auto;
-}
-
-h1, p {
-	text-align: center;
-}*/

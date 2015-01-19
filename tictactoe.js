@@ -1,4 +1,3 @@
-
 window.onload = function() {
 
 var gameBoxes = document.getElementsByClassName("square");
@@ -15,12 +14,13 @@ var moveCount = document.getElementById("moveCount");
 var announcePlayer1 = "Waiting for Player 1 (X) to make a move.";
 var announcePlayer2 = "Waiting for Player 2 (O) to make a move.";
 var gameOverAnnounce = "Game Over! Press 'New Game' below to play again!";
-
-
-boxClick(gameBoxes);
-
+var playerCombo = ["0", "1", "2", "3", "4", "5", "6", "7", "8"];
 var turnCount = 0;
 var gameOver = false;
+
+boxClick(gameBoxes);
+clickNewGame();
+
 
 function playerAnnounce() {
 	var turn = document.getElementById("player");
@@ -38,10 +38,6 @@ function playerAnnounce() {
 	}
 }
 
-
-
-var playerCombo = ["0", "1", "2", "3", "4", "5", "6", "7", "8"];
-
 function boxClick(clicks) {
 	for (var i = 0; i < clicks.length; i++) {
 		clicks[i].addEventListener('click', addMarker);
@@ -52,7 +48,7 @@ function boxClick(clicks) {
 
 function boxOver() {
 		this.style.backgroundColor = "white";
-		this.style.opacity = 0.3;
+		this.style.opacity = 0.6;
 }
 
 function boxOut() {
@@ -184,7 +180,5 @@ function newGame() {
 	playerAnnounce();
 	console.log(playerCombo);
 }
-
-clickNewGame();
 
 };
