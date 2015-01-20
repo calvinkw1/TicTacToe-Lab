@@ -1,3 +1,13 @@
+body {
+	text-align: center;
+	background-color: #bcf2f4;
+	font-family: Verdana;
+}
+
+h1 {
+	font-family: Impact;
+}
+
 .square {
 	height: 150px;
 	width: 150px;
@@ -9,15 +19,6 @@
 	font-family: 'Sigmar One', cursive;
 }
 
-body {
-	text-align: center;
-	background-color: #bcf2f4;
-	font-family: Verdana;
-}
-
-h1 {
-	font-family: Impact;
-}
 .container {
 	height: 470px;
 	width: 470px;
